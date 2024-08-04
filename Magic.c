@@ -4,7 +4,7 @@
     { \
     EMIT(0x6A) EMIT(_cs)                         /*  push   _cs             */ \
     EMIT(0xE8) EMIT(0) EMIT(0) EMIT(0) EMIT(0)   /*  call   $+5 (Jump Bias is 0 actually, just For Save EIP) */ \
-    EMIT(0x83) EMIT(4) EMIT(0x24) EMIT(5)        /*  add    dword [esp], 5  */ \
+    EMIT(0x83) EMIT(4) EMIT(0x24) EMIT(5)        /*  add    dword [esp], 5 (Set a Better return addr) */ \
     EMIT(0xCB)                                   /*  retf                   */ \
     // x64 code ...
     }
